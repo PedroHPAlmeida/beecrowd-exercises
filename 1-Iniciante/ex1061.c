@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+void leDia(int *dia);
 void leitura(int *h, int *m, int *s);
 void duracao(int *dias, int *horas, int *min, int *seg, int dI, int hI, int mI, int sI, int dT, int hT, int mT, int sT);
 
@@ -11,12 +12,10 @@ int main(){
     int dias = 0, horas = 0, min = 0, seg = 0; //duracao
 
     /*entrada*/
-    printf("Dia "); //inicio
-    scanf("%d", &diaI);
+    leDia(&diaI); //inicio
     leitura(&hhI, &mmI, &ssI);
     
-    printf("Dia "); //termino
-    scanf("%d", &diaT);
+    leDia(&diaT); //termino
     leitura(&hhT, &mmT, &ssT);
 
     /*processamento*/
@@ -31,9 +30,30 @@ int main(){
     return 0;
 }
 
+void leDia(int *dia){
+    int i;
+    char str[7], d[3] = {'\0','\0','\0'};
+    char nums[11] = {'0','1','2','3','4','5','6','7','8','9'};
+
+    scanf(" %6[^\n]s", str);
+    
+    for(i = 0; i < 10; i++){
+        if(str[5] == nums[i]){
+            d[0] = str[4];
+            d[1] = str[5];
+            d[2] = '\0';
+            *dia = atoi(d);
+            break;
+        }
+    }
+
+    d[0] = str[4];
+    *dia = atoi(d);
+}
+
 void leitura(int *h, int *m, int *s){
     int i;
-    char tempo[13], hh[3], mm[3], ss[3];
+    char tempo[13], hh[3] = {'\0','\0','\0'}, mm[3] = {'\0','\0','\0'}, ss[3] = {'\0','\0','\0'};
 
     scanf(" %12[^\n]s", tempo);
 
