@@ -1,10 +1,11 @@
 #include <stdio.h>
 
-int fibonacci(int x);
+long long int fibonacci(int x);
 
 int main(){
     /*variaveis*/
-    int t, n, i, fib;
+    int n, t, i;
+    long long int fib;
 
     /*entrada & processamento*/
     scanf("%d", &t);
@@ -12,21 +13,22 @@ int main(){
     for(i = 0; i < t; i++){
         scanf("%d", &n);
         fib = fibonacci(n);
-        printf("Fib(%d) = %d\n", n, fib); //saida
+        printf("Fib(%d) = %lld\n", n, fib); //saida
     }
     return 0;
 }   
 
-int fibonacci(int x){
+long long int fibonacci(int x){
     /*variaveis*/
-    int i, fib[60];
+    long long int fib[61];
+    int i;
 
     /*processamento*/
     fib[0] = 0;
     fib[1] = 1;
 
     if(x > 1){
-        for(i = 2; i < 60; i++){
+        for(i = 2; i <= x; i++){
             fib[i] = fib[i - 1] + fib[i - 2];
         }
     }
