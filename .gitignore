@@ -58,3 +58,4 @@ dkms.conf
 3-Strings/.vscode/tasks.json
 .vscode/launch.json
 .vscode/launch.json
+*.json
