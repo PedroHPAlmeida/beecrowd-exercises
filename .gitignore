@@ -60,3 +60,4 @@ dkms.conf
 .vscode/launch.json
 *.json
 .vscode/launch.json
+*.json
