@@ -3,7 +3,7 @@
 
 int main(){
     /*variaveis*/
-    int i, j;
+    int i, j, n = 0;
     char t;
     double m[ORD][ORD], soma = 0;
 
@@ -14,6 +14,7 @@ int main(){
             scanf("%lf", &m[i][j]);
             if(j > i){
                 soma += m[i][j];
+                n++;
             }
         }
     }
@@ -23,8 +24,7 @@ int main(){
         printf("%.1lf\n", soma);
     }
     else{
-        printf("%.1lf\n", soma / (float)ORD);
+        printf("%.1lf\n", soma / (float)n);
     }
-
     return 0;
 }
