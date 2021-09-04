@@ -7,7 +7,7 @@ int situacoes(char tabuleiro[], int n);
 int main(){
     /*variaveis*/
     int n, i;
-    char *tabuleiro, *tabFuturo, ePossivel;
+    char *tabuleiro = NULL, *tabFuturo = NULL, ePossivel;
 
     while(1){
         /*entrada*/
@@ -17,8 +17,8 @@ int main(){
         }
 
         ePossivel = 'N';
-        tabuleiro = NULL;
-        tabFuturo = NULL;
+        free(tabuleiro);
+        free(tabFuturo);
 
         tabuleiro = (char *) malloc(n + 1); //alocando o vetor de caracteres
         tabFuturo = (char *) malloc(n + 1);
@@ -50,6 +50,7 @@ int situacoes(char tabuleiro[], int n){
     if(pont != NULL){
         return 1;
     }
+
     pont = strstr(tabuleiro, "...");
     if(pont != NULL){
         return 0;
