@@ -15,7 +15,7 @@ void decodificador(char frase[], int desloc, char fraseDecodificada[]){
     fraseDecodificada[i] = '\0';
 }
 
-
+int main(){
     int n, i, desloc = 0;
     char frase[51], fraseDecodificada[51];
 
