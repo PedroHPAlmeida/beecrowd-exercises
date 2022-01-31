@@ -16,19 +16,17 @@ int main(){
     else{
         if(faixa <= 3){
             imposto = (salario - 2000) * 0.08;
-            printf("R$ %.2f\n", imposto);
         }
         else if(faixa <= 4.5){
             imposto = 1000 * 0.08;
             imposto += (salario - 3000) * 0.18;
-            printf("R$ %.2f\n", imposto);
         }
         else{
             imposto = 1000 * 0.08;
             imposto += 1500 * 0.18;
             imposto += (salario - 4500) * 0.28;
-            printf("R$ %.2f\n", imposto);
-        }    
+        }
+        printf("R$ %.2f\n", imposto);
     }
     
     return 0;
