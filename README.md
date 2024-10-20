@@ -1,4 +1,4 @@
-<img src="https://www.beecrowd.com.br/home/wp-content/uploads/2021/08/beecrowd__negativoHor-vazado-small-PNG-1024x246.png" alt="Beecrowd">
+<img src="https://judge.beecrowd.com/img/5.0/logo-beecrowd.png?1700546944" alt="Beecrowd">
 
 # Exercícios Beecrowd :space_invader:
 
